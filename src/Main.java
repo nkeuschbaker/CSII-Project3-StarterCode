@@ -4,7 +4,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Student student1 = new Student("000001", "cat", "May", 6, 1, true, true);
+        Student student2 = new Student("000002", "Dog", "October", 8, 8, true, true);
+        Student student3 = new Student("000003", "Albino Cyclops Shark", "January", 3, 8, true, false);
+        Student student4 = new Student("000004", "Dog", "February", 6, 5, false, true);
+        Student student5 = new Student("000005", "Pokemon", "February", 10, 1, false, false);
+        Student student6 = new Student("000006", "Dog", "January", 0, 10, true, true);
+        Student student7 = new Student("000007", "Dog", "September", 8, 4, false, true);
         // TO DO: Create a Student List object that stores preloaded student objects
+
+        
         // Student objects should be each student with info you collected
 
         while (true) {
@@ -31,15 +40,6 @@ public class Main {
                 case 4:
                     deleteStudent(scanner);
                     break;
-                case 5:
-                    System.out.println("Exiting...");
-                    return;
-                default:
-                    System.out.println("Invalid option. Please try again.");
-            }
-        }
-    }
-
     private static void createStudent(Scanner scanner) {
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
@@ -59,12 +59,21 @@ public class Main {
     }
 
     private static void updateStudent(Scanner scanner) {
+        System.out.println("Student created successfully!");
+    }
+
+    private static void readStudents(Scanner scanner) {
+        List<Student> students = StudentList.readStudents();
+        // TO DO: print out each student
+    }
+
+    private static void updateStudent(Scanner scanner) {
         // TO DO: ask for new information to update student
 
-        Student student = new Student(id, name, course);
-        StudentList.updateStudent(student);
-        System.out.println("Student updated successfully!");
+        StudentList.deleteStudent(student);
+        System.out.println("Student deleted successfully!");
     }
+}
 
     private static void deleteStudent(Scanner scanner) {
         // TO DO: ask for student ID and store in a variable
