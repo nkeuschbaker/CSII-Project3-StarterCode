@@ -72,5 +72,6 @@ public class Main {
         Student student = new Student(id, "", "");
         StudentList.deleteStudent(student);
         System.out.println("Student deleted successfully!");
+
     }
 }

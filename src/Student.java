@@ -1,12 +1,24 @@
 public class Student {
     private String id;
-    private String name;
-    private String course;
+    private String reasoning;
+    private String month;
+    private int siblings;
+    private int grade;
+    private int handicap;
+    private boolean favNum;
+    private boolean cD;
 
-    public Student(String id, String name, String course) {
+
+    public Student(String id, String reasoning, String month, int siblings, int grade, int handicap, boolean favNum, boolean cD) {
         this.id = id;
-        this.name = name;
-        this.course = course;
+        this.reasoning = reasoning;
+        this.month = month;
+        this.siblings = siblings;
+        this.grade = grade;
+        this.handicap = handicap;
+        this.favNum = favNum;
+        this.cD = cD;
+
     }
 
     // Getters and setters
