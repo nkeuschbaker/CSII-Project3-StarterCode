@@ -6,7 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         // TO DO: Create a Student List object that stores preloaded student objects
         // Student objects should be each student with info you collected
-
+// testing
         while (true) {
             System.out.println("1. Create Student");
             System.out.println("2. Read Students");
