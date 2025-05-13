@@ -43,16 +43,19 @@ public class Main {
     private static void createStudent(Scanner scanner) {
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
-        // TO DO: fill out the rest of this
+        System.out.print("Enter favorite color: ");
+        String favoriteColor = scanner.nextLine();
+        // TO DO 1: fill out the rest of this
 
-        // TO DO: create a student object with this information
+        // TO DO 2 : create a student object with this information
+        
         StudentList.createStudent(student);
         System.out.println("Student created successfully!");
     }
 
     private static void readStudents(Scanner scanner) {
         List<Student> students = StudentList.readStudents();
-        // TO DO: print out each student
+        // TO DO 3: print out each student
     }
 
     private static void updateStudent(Scanner scanner) {
