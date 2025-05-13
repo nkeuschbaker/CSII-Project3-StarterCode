@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        student = new student("000001", "cat", "January", 8, 1, true, true);
+        student = new student("000002", )
         // TO DO: Create a Student List object that stores preloaded student objects
         // Student objects should be each student with info you collected
 
