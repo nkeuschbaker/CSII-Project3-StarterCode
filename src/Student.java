@@ -7,10 +7,14 @@ public class Student {
     private boolean enoughSleep;
     private boolean likeSleep;
 
-    public Student(String id, String name, String course) {
+    public Student(String id, String pet, String brithMonth, int sleep, int tiredLevel, boolean enoughSleep, boolean likeSleep) {
         this.id = id;
-        this.name = name;
-        this.course = course;
+        this.pet = pet;
+        this.brithMonth = brithMonth;
+        this.sleep = sleep;
+        this.tiredLevel = tiredLevel;
+        this.enoughSleep = enoughSleep;
+        this.likeSleep = likeSleep;
     }
 
     // Getters and setters
