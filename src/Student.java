@@ -17,7 +17,10 @@ public class Student {
         this.likeSleep = likeSleep;
     }
 
-    // Getters and setters
+    // Getters and setters 
+    /** 
+     * these getters and setters were made ussing ai after one example was made by hand
+     *  */
     public String getId() {
     return id;
     }
