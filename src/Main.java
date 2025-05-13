@@ -40,22 +40,25 @@ public class Main {
                 case 4:
                     deleteStudent(scanner);
                     break;
-                case 5:
-                    System.out.println("Exiting...");
-                    return;
-                default:
-                    System.out.println("Invalid option. Please try again.");
-            }
-        }
-    }
-
     private static void createStudent(Scanner scanner) {
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
-        // TO DO: fill out the rest of this
+        System.out.print("Enter favorite color: ");
+        String favoriteColor = scanner.nextLine();
+        // TO DO 1: fill out the rest of this
 
-        // TO DO: create a student object with this information
+        // TO DO 2 : create a student object with this information
+        
         StudentList.createStudent(student);
+        System.out.println("Student created successfully!");
+    }
+
+    private static void readStudents(Scanner scanner) {
+        List<Student> students = StudentList.readStudents();
+        // TO DO 3: print out each student
+    }
+
+    private static void updateStudent(Scanner scanner) {
         System.out.println("Student created successfully!");
     }
 
@@ -67,10 +70,10 @@ public class Main {
     private static void updateStudent(Scanner scanner) {
         // TO DO: ask for new information to update student
 
-        Student student = new Student(id, name, course);
-        StudentList.updateStudent(student);
-        System.out.println("Student updated successfully!");
+        StudentList.deleteStudent(student);
+        System.out.println("Student deleted successfully!");
     }
+}
 
     private static void deleteStudent(Scanner scanner) {
         // TO DO: ask for student ID and store in a variable
