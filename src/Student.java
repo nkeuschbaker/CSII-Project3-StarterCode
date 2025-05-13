@@ -30,28 +30,67 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getReasoning() {
+        return reasoning;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setReasoning(String name) {
+        this.reasoning = reasoning;
     }
 
-    public String getCourse() {
-        return course;
+    public String getMonth() {
+        return month;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public void setMonth(String course) {
+        this.month = month;
     }
+
+    public int getSiblings() {
+        return siblings;
+    }
+    public void setSiblings(int siblings) {
+        this.siblings = siblings;
+    }
+    public int getGrade() {
+        return grade;
+    }
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public int getHandicap() {
+        return handicap;
+    }
+    public void setHandicap(int handicap) {
+        this.handicap = handicap;
+    }
+    public boolean isFavNum() {
+        return favNum;
+    }
+    public void setFavNum(boolean favNum) {
+        this.favNum = favNum;
+    }
+    public boolean isCD() {
+        return cD;
+    }
+    public void setCD(boolean cD) {
+        this.cD = cD;
+    }
+
 
     @Override
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", course='" + course + '\'' +
+                ", reasoning for playing golf='" + reasoning + '\'' +
+                ", second favorite month='" + month + '\'' +
+                ", number of siblings='" + siblings + '\'' +
+                ", grade='" + grade + '\'' +
+                ", golf handicap index='" + handicap + '\'' +
+                ", favorite number='" + favNum + '\'' +
+                "Dogs are better than Cats='" + cD + '\'' +
+
                 '}';
     }
 }
