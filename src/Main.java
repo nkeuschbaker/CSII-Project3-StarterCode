@@ -12,6 +12,8 @@ public class Main {
         Student student6 = new Student("000006", "Dog", "January", 0, 10, true, true);
         Student student7 = new Student("000007", "Dog", "September", 8, 4, false, true);
         // TO DO: Create a Student List object that stores preloaded student objects
+
+        
         // Student objects should be each student with info you collected
 
         while (true) {
