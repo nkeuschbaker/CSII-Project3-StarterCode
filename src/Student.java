@@ -1,7 +1,11 @@
 public class Student {
     private String id;
-    private String sleep;
-    private String course;
+    private String pet;
+    private String brithMonth;
+    private int sleep;
+    private int tiredLevel;
+    private boolean enoughSleep;
+    private boolean likeSleep;
 
     public Student(String id, String name, String course) {
         this.id = id;
