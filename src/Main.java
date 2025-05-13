@@ -4,8 +4,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        student = new student("000001", "cat", "January", 8, 1, true, true);
-        student = new student("000002", )
+        Student student1 = new Student("000001", "cat", "May", 6, 1, true, true);
+        Student student2 = new Student("000002", "Dog", "October", 8, 8, true, true);
+        Student student3 = new Student("000003", "Albino Cyclops Shark", "January", 3, 8, true, false);
+        Student student4 = new Student("000004", "Dog", "February", 6, 5, false, true);
+        Student student5 = new Student("000005", "Pokemon", "February", 10, 1, false, false);
+        Student student6 = new Student("000006", "Dog", "January", 0, 10, true, true);
+        Student student7 = new Student("000007", "Dog", "September", 8, 4, false, true);
         // TO DO: Create a Student List object that stores preloaded student objects
         // Student objects should be each student with info you collected
 
