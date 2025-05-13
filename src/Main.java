@@ -53,6 +53,7 @@ public class Main {
 
     private static void readStudents(Scanner scanner) {
         List<Student> students = StudentList.readStudents();
+        if(students.isEmpty()) System.out.println("No Students");
         // TO DO: print out each student
         for(Student s : students){
             System.out.println(s));
@@ -68,7 +69,9 @@ public class Main {
     }
 
     private static void deleteStudent(Scanner scanner) {
-        // TO DO: ask for student ID and store in a variable
+        // TO DO: ask for student ID and store in a variable   
+        System.out.print("Enter student ID to delete: ");
+        String id = scanner.nextLine();
 
         Student student = new Student(id, "", "");
         StudentList.deleteStudent(student);
