@@ -43,9 +43,27 @@ public class Main {
     private static void createStudent(Scanner scanner) {
         System.out.print("Enter student ID: ");
         String id = scanner.nextLine();
-        // TO DO: fill out the rest of this
+        // TO DO 1: fill out the rest of this
+        System.out.print("Enter Hours of Sleep (Round to Nearest Integer): ");
+        String hrsSleep = scanner.nextLine();
 
-        // TO DO: create a student object with this information
+        System.out.print("How Tired Do You Feel Today (Round to Nearest Integer): ");
+        String tiredInt = scanner.nextLine();
+
+        System.out.print("True or False, You Like to Sleep? ");
+        String likeSleep = scanner.nextLine();
+
+        System.out.print("True or False, You Like to Sleep? ");
+        String enoughSleep = scanner.nextLine();
+
+        System.out.print("What Month Were You Born In? ");
+        String monthBornIn = scanner.nextLine();
+
+        System.out.print("What is Your Favorite Type of Pet: ");
+        String favPet = scanner.nextLine();
+
+        // TO DO 2 : create a student object with this information
+        Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredInt, enoughSleep, likeSleep);
         StudentList.createStudent(student);
         System.out.println("Student created successfully!");
     }
