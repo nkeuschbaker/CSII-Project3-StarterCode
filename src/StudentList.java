@@ -15,8 +15,12 @@ public class StudentList {
     public static void updateStudent(Student student) {
         for (Student s : students) {
             if (s.getId().equals(student.getId())) {
-                s.setName(student.getName());
-                s.setCourse(student.getCourse());
+                s.setFavPet(student.getFavPet());
+                s.setMonthBornIn(student.getMonthBornIn());
+                s.setHrsSleep(student.getHrsSleep());
+                s.setTiredInt(student.getTiredInt());
+                s.setEnoughSleep(student.getEnoughSleep());
+                s.setLikeSleep(student.getLikeSleep());
                 break;
             }
         }
