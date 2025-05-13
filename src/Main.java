@@ -51,7 +51,7 @@ public class Main {
         System.out.println("Student created successfully!");
     }
 
-    private static void readStudents(Scanner scanner) {
+    private static void readStudents(Scanner scanner) {//bryan
         List<Student> students = StudentList.readStudents();
         if(students.isEmpty()) System.out.println("No Students");
         // TO DO: print out each student
@@ -68,7 +68,7 @@ public class Main {
         System.out.println("Student updated successfully!");
     }
 
-    private static void deleteStudent(Scanner scanner) {
+    private static void deleteStudent(Scanner scanner) {//bryan
         // TO DO: ask for student ID and store in a variable   
         System.out.print("Enter student ID to delete: ");
         String id = scanner.nextLine();
