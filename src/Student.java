@@ -1,6 +1,6 @@
 public class Student {
     private String id;
-    private String name;
+    private String sleep;
     private String course;
 
     public Student(String id, String name, String course) {
