@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // TO DO: Create a Student List object that stores preloaded student objects
-        // Student objects should be each student with info you collected
+        // Student objects should be each student with info you collecteds
+        StudentList studentList = new StudentList(null);
 
         while (true) {
             System.out.println("1. Create Student");
@@ -53,6 +54,9 @@ public class Main {
     private static void readStudents(Scanner scanner) {
         List<Student> students = StudentList.readStudents();
         // TO DO: print out each student
+        for(Student s : students){
+            System.out.println(s));
+        }
     }
 
     private static void updateStudent(Scanner scanner) {
