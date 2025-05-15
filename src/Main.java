@@ -14,7 +14,14 @@ public class Main {
         Student student7 = new Student("000007", "Dog", "September", 8, 4, false, true);
 
         // Student objects should be each student with info you collecteds
-        StudentList studentList = new StudentList(null);
+        StudentList studentList = new StudentList();
+        studentList.createStudent(student1);
+        studentList.createStudent(student2);
+        studentList.createStudent(student3);
+        studentList.createStudent(student4);
+        studentList.createStudent(student5);
+        studentList.createStudent(student6);
+        studentList.createStudent(student7);
 
         while (true) {
             System.out.println("1. Create Student");
@@ -61,16 +68,20 @@ public class Main {
         String monthBornIn = scanner.nextLine();
 
         System.out.print("Enter Hours of Sleep (Round to Nearest Integer): ");
-        String hrsSleep = scanner.nextLine();
-
+        int hrsSleep = scanner.nextInt();
+        scanner.nextLine(); // Consume leftover newline
+    
         System.out.print("Enter How Tired You Are (Round to Nearest Integer): ");
-        String tiredLevel = scanner.nextLine();
-
+        int tiredLevel = scanner.nextInt();
+        scanner.nextLine(); // Consume leftover newline
+    
         System.out.print("True or False, Do You Get Enough Sleep: ");
-        String enoughSleep = scanner.nextLine();
-
-        System.out.print("True or False, Do You Enjoy Sleeping: ");
-        String likeSleep = scanner.nextLine();
+        boolean enoughSleep = scanner.nextBoolean();
+        scanner.nextLine(); // Consume leftover newline
+    
+        System.out.print("Enter Do You Enjoy Sleeping (Yes, No, Sometimes, etc.): ");
+        boolean likeSleep = scanner.nextBoolean();
+        scanner.nextLine();
 
         // TO DO: create a student object with this information
         Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);
