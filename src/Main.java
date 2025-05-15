@@ -99,12 +99,36 @@ public class Main {
     }
 
     private static void updateStudent(Scanner scanner) {
-        // TO DO: ask for new information to update student
+    System.out.print("Enter ID of student to update: ");
+    String id = scanner.nextLine();
 
-        Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);
-        StudentList.updateStudent(student);
-        System.out.println("Student updated successfully!");
-    }
+    System.out.print("Enter new Favorite Animal: ");
+    String favPet = scanner.nextLine();
+
+    System.out.print("Enter new Month Born In: ");
+    String monthBornIn = scanner.nextLine();
+
+    System.out.print("Enter new Hours of Sleep (Round to Nearest Integer): ");
+    int hrsSleep = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.print("Enter new Tired Level (Round to Nearest Integer): ");
+    int tiredLevel = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.print("True or False, Do You Get Enough Sleep: ");
+    boolean enoughSleep = scanner.nextBoolean();
+    scanner.nextLine();
+
+    System.out.print("True or False, Do You Enjoy Sleeping: ");
+    boolean likeSleep = scanner.nextBoolean();
+    scanner.nextLine();
+
+    Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);
+    StudentList.updateStudent(student);
+    System.out.println("Student updated successfully!");
+}
+
 
     private static void deleteStudent(Scanner scanner) {//bryan
         // TO DO: ask for student ID and store in a variable   
