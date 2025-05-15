@@ -5,6 +5,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // TO DO: Create a Student List object that stores preloaded student objects
+        Student student1 = new Student("000001", "cat", "May", 6, 1, true, true);
+        Student student2 = new Student("000002", "Dog", "October", 8, 8, true, true);
+        Student student3 = new Student("000003", "Albino Cyclops Shark", "January", 3, 8, true, false);
+        Student student4 = new Student("000004", "Dog", "February", 6, 5, false, true);
+        Student student5 = new Student("000005", "Pokemon", "February", 10, 1, false, false);
+        Student student6 = new Student("000006", "Dog", "January", 0, 10, true, true);
+        Student student7 = new Student("000007", "Dog", "September", 8, 4, false, true);
+
         // Student objects should be each student with info you collecteds
         StudentList studentList = new StudentList(null);
 
@@ -46,7 +54,26 @@ public class Main {
         String id = scanner.nextLine();
         // TO DO: fill out the rest of this
 
+        System.out.print("Enter Favorite Animal: ");
+        String favPet = scanner.nextLine();
+
+        System.out.print("Enter Month Born In: ");
+        String monthBornIn = scanner.nextLine();
+
+        System.out.print("Enter Hours of Sleep (Round to Nearest Integer): ");
+        String hrsSleep = scanner.nextLine();
+
+        System.out.print("Enter How Tired You Are (Round to Nearest Integer): ");
+        String tiredLevel = scanner.nextLine();
+
+        System.out.print("True or False, Do You Get Enough Sleep: ");
+        String enoughSleep = scanner.nextLine();
+
+        System.out.print("True or False, Do You Enjoy Sleeping: ");
+        String likeSleep = scanner.nextLine();
+
         // TO DO: create a student object with this information
+        Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);
         StudentList.createStudent(student);
         System.out.println("Student created successfully!");
     }
@@ -63,7 +90,7 @@ public class Main {
     private static void updateStudent(Scanner scanner) {
         // TO DO: ask for new information to update student
 
-        Student student = new Student(id, name, course);
+        Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);
         StudentList.updateStudent(student);
         System.out.println("Student updated successfully!");
     }
