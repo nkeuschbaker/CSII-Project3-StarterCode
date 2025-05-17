@@ -75,40 +75,37 @@ public class Main {
             System.out.print(s.format());
         }
     }
+  
+    private static void updateStudent(Scanner scanner) {
+      System.out.print("Enter ID of student to update: ");
+      String id = scanner.nextLine();
 
-    private static void updateStudent(Scanner sc) {
-        System.out.print("ID of student to update: ");
-        String id = sc.nextLine();
-        Student s = studentList.findById(id);
-        if (s == null) { System.out.println("Not found."); return; }
+      System.out.print("Enter new Favorite Animal: ");
+      String favPet = scanner.nextLine();
 
-        /* Blank entry = keep the old value */
-        System.out.printf("Favourite animal (%s): ", s.getFavoriteAnimal());
-        String fav = sc.nextLine();
-        if (!fav.isBlank()) s.setFavoriteAnimal(fav);
+      System.out.print("Enter new Month Born In: ");
+      String monthBornIn = scanner.nextLine();
 
-        System.out.printf("Birth month (%s): ", s.getBirthMonth());
-        String month = sc.nextLine();
-        if (!month.isBlank()) s.setBirthMonth(month);
+      System.out.print("Enter new Hours of Sleep (Round to Nearest Integer): ");
+      int hrsSleep = scanner.nextInt();
+      scanner.nextLine();
 
-        System.out.printf("Hours sleep (%d): ", s.getHoursSleep());
-        String hrs = sc.nextLine();
-        if (!hrs.isBlank()) s.setHoursSleep(Integer.parseInt(hrs));
+      System.out.print("Enter new Tired Level (Round to Nearest Integer): ");
+      int tiredLevel = scanner.nextInt();
+      scanner.nextLine();
 
-        System.out.printf("Tired level (%d): ", s.getTiredLevel());
-        String tired = sc.nextLine();
-        if (!tired.isBlank()) s.setTiredLevel(Integer.parseInt(tired));
+      System.out.print("True or False, Do You Get Enough Sleep: ");
+      boolean enoughSleep = scanner.nextBoolean();
+      scanner.nextLine();
 
-        System.out.printf("Gets enough sleep (%b): ", s.isEnoughSleep());
-        String enough = sc.nextLine();
-        if (!enough.isBlank()) s.setEnoughSleep(Boolean.parseBoolean(enough));
+      System.out.print("True or False, Do You Enjoy Sleeping: ");
+      boolean likeSleep = scanner.nextBoolean();
+      scanner.nextLine();
 
-        System.out.printf("Enjoys sleeping (%b): ", s.isLikeSleep());
-        String like = sc.nextLine();
-        if (!like.isBlank()) s.setLikeSleep(Boolean.parseBoolean(like));
-
-        System.out.println("Student updated.");
-    }
+      Student student = new Student(id, favPet, monthBornIn, hrsSleep, tiredLevel, enoughSleep, likeSleep);       
+      StudentList.updateStudent(student);
+      System.out.println("Student updated successfully!");
+    }       
 
     private static void deleteStudent(Scanner sc) {
         System.out.print("ID of student to delete: ");
