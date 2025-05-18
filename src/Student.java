@@ -1,88 +1,68 @@
 public class Student {
     private String id;
-    private String pet;
-    private String brithMonth;
-    private int sleep;
+    private String favoriteAnimal;
+    private String birthMonth;
+    private int hoursSleep;
     private int tiredLevel;
     private boolean enoughSleep;
     private boolean likeSleep;
 
-    public Student(String id, String pet, String brithMonth, int sleep, int tiredLevel, boolean enoughSleep, boolean likeSleep) {
+    public Student(String id, String favoriteAnimal, String birthMonth,
+                   int hoursSleep, int tiredLevel,
+                   boolean enoughSleep, boolean likeSleep) {
         this.id = id;
-        this.pet = pet;
-        this.brithMonth = brithMonth;
-        this.sleep = sleep;
+        this.favoriteAnimal = favoriteAnimal;
+        this.birthMonth = birthMonth;
+        this.hoursSleep = hoursSleep;
         this.tiredLevel = tiredLevel;
         this.enoughSleep = enoughSleep;
         this.likeSleep = likeSleep;
     }
 
-    // Getters and setters 
-    /** 
-     * these getters and setters were made ussing ai after one example was made by hand
-     *  */
-    public String getId() {
-    return id;
-    }
+    /* ── getters & setters -─ */
+    public String getId()                { return id; }
+    public void   setId(String id)       { this.id = id; }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public String getFavoriteAnimal()                { return favoriteAnimal; }
+    public void   setFavoriteAnimal(String fav)      { this.favoriteAnimal = fav; }
 
-    public String getPet() {
-        return pet;
-    }
+    public String getBirthMonth()                { return birthMonth; }
+    public void   setBirthMonth(String month)    { this.birthMonth = month; }
 
-    public void setPet(String pet) {
-        this.pet = pet;
-    }
+    public int  getHoursSleep()                   { return hoursSleep; }
+    public void setHoursSleep(int hoursSleep)     { this.hoursSleep = hoursSleep; }
 
-    public String getBrithMonth() {
-        return brithMonth;
-    }
+    public int  getTiredLevel()                   { return tiredLevel; }
+    public void setTiredLevel(int tiredLevel)     { this.tiredLevel = tiredLevel; }
 
-    public void setBrithMonth(String brithMonth) {
-        this.brithMonth = brithMonth;
-    }
+    public boolean isEnoughSleep()                { return enoughSleep; }
+    public void    setEnoughSleep(boolean enough) { this.enoughSleep = enough; }
 
-    public int getSleep() {
-        return sleep;
-    }
-
-    public void setSleep(int sleep) {
-        this.sleep = sleep;
-    }
-
-    public int getTiredLevel() {
-        return tiredLevel;
-    }
-
-    public void setTiredLevel(int tiredLevel) {
-        this.tiredLevel = tiredLevel;
-    }
-
-    public boolean isEnoughSleep() {
-        return enoughSleep;
-    }
-
-    public void setEnoughSleep(boolean enoughSleep) {
-        this.enoughSleep = enoughSleep;
-    }
-
-    public boolean isLikeSleep() {
-        return likeSleep;
-    }
-
-    public void setLikeSleep(boolean likeSleep) {
-        this.likeSleep = likeSleep;
-    }
+    public boolean isLikeSleep()                { return likeSleep; }
+    public void    setLikeSleep(boolean like)   { this.likeSleep = like; }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", course='" + course + '\'' +
-                '}';
+               "id='" + id + '\'' +
+               ", favoriteAnimal='" + favoriteAnimal + '\'' +
+               ", birthMonth='" + birthMonth + '\'' +
+               ", hoursSleep=" + hoursSleep +
+               ", tiredLevel=" + tiredLevel +
+               ", enoughSleep=" + enoughSleep +
+               ", likeSleep=" + likeSleep +
+               '}';
+    }
+    
+    //formatting cuz it looks ugly otherwise
+    public String format() {
+        return "ID: " + id + "\n"
+             + "  Favorite Animal: " + favoriteAnimal + "\n"
+             + "  Birth Month:     " + birthMonth + "\n"
+             + "  Hours Sleep:     " + hoursSleep + "\n"
+             + "  Tired Level:     " + tiredLevel + "\n"
+             + "  Enough Sleep:    " + (enoughSleep ? "Yes" : "No") + "\n"
+             + "  Likes Sleeping:  " + (likeSleep ? "Yes" : "No") + "\n"
+             + "-----------------------------\n";
     }
 }

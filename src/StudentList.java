@@ -2,31 +2,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentList {
-    private static List<Student> students = new ArrayList<>();
+    private static final List<Student> students = new ArrayList<>();
 
-    public static void createStudent(Student student) {
-        students.add(student);
+    public static void createStudent(Student s) {
+        students.add(s);
     }
 
     public static List<Student> readStudents() {
         return students;
     }
 
-    public static void updateStudent(Student student) {
+    public static Student findById(String id) {
         for (Student s : students) {
-            if (s.getId().equals(student.getId())) {
-                s.setPet(student.getPet());
-                s.setBirthMonth(student.getBirthMonth());
-                s.setSleep(student.getSleep());
-                s.setTiredLevel(student.getTiredLevel());
-                s.setEnoughSleep(student.getEnoughSleep());
-                s.setLikeSleep(student.getLikeSleep());
-                break;
+            if (s.getId().equals(id)) {
+                return s;
             }
         }
+        return null;
     }
 
-    public static void deleteStudent(Student student) {
-        students.removeIf(s -> s.getId().equals(student.getId()));
+    public static boolean removeById(String id) {
+        return students.removeIf(s -> s.getId().equals(id));
+    }
+
+    public static void updateStudent(Student updatedStudent) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getId().equals(updatedStudent.getId())) {
+                students.set(i, updatedStudent);
+                return;
+            }
+        }
     }
 }
