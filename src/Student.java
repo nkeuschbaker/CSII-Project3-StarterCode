@@ -34,7 +34,7 @@ public class Student {
         return reasoning;
     }
 
-    public void setReasoning(String name) {
+    public void setReasoning(String reasoning) {
         this.reasoning = reasoning;
     }
 
@@ -42,7 +42,7 @@ public class Student {
         return month;
     }
 
-    public void setMonth(String course) {
+    public void setMonth(String umonth) {
         this.month = month;
     }
 
