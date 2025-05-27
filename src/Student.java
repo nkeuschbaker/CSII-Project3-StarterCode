@@ -82,14 +82,14 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
-                ", reasoning for playing golf='" + reasoning + '\'' +
-                ", second favorite month='" + month + '\'' +
-                ", number of siblings='" + siblings + '\'' +
-                ", grade='" + grade + '\'' +
-                ", golf handicap index='" + handicap + '\'' +
-                ", favorite number='" + favNum + '\'' +
-                "Dogs are better than Cats='" + cD + '\'' +
+                "id: '" + id + '\'' +
+                ", reasoning for playing golf: '" + reasoning + '\'' +
+                ", second favorite month: '" + month + '\'' +
+                ", number of siblings: " + siblings + '\'' +
+                ", grade: " + grade + '\'' +
+                ", golf handicap index: " + handicap + '\'' +
+                ", favorite number: " + favNum + '\'' +
+                "Dogs are better than Cats: " + cD + '\'' +
 
                 '}';
     }

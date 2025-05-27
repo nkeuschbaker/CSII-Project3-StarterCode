@@ -20,6 +20,18 @@ public class Main {
         Student i = new Student("009", "Its fun", "September", 2, 11, 10, true, false);
         Student j = new Student ("010", "I started playing with my dad and brother and I really loved it.", "June", 1, 12, 20, true, false);
         Student k = new Student("011","Its fun and with my friends", "July", 2, 9, 17, true, false);
+
+        studentList.createStudent(a);
+        studentList.createStudent(b);
+        studentList.createStudent(c);
+        studentList.createStudent(d);
+        studentList.createStudent(e);
+        studentList.createStudent(f);
+        studentList.createStudent(g);
+        studentList.createStudent(h);
+        studentList.createStudent(i);
+        studentList.createStudent(j);
+        studentList.createStudent(k);
         //
         //
         //
@@ -88,6 +100,9 @@ public class Main {
     private static void readStudents(Scanner scanner) {
         List<Student> students = StudentList.readStudents();
         // TO DO 3: print out each student
+        for(Student student : students) {
+            System.out.println(student);
+        }
     }
 
     private static void updateStudent(Scanner scanner) {
